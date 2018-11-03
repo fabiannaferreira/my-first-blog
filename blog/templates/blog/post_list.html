@@ -7,6 +7,14 @@
             <h1><a href="/">Blog Django Girls da Fabianna</a></h1>
         </div>
 
+       {% for post in posts %}
+    <div>
+        <p>publicado em: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+		{% endfor %}
+
         <div>
             <p>publicado: 03 de novembro de 2018, às 16h42 </p>
             <h2><a href="">Meu primeiro post TCHANÃAAAA :D </a></h2>
